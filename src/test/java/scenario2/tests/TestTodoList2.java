@@ -41,7 +41,11 @@ public class TestTodoList2 {
             ali.attemptsTo(DesiredSteps.verifyItemIsAdded(item));
         }
 
-        ali.attemptsTo(DesiredSteps.verifyTotalTaskCount());
+            ali.attemptsTo(DesiredSteps.verifyTotalTaskCount());
+
+        for (String item : items) {
+            ali.attemptsTo(DesiredSteps.checkTaskAsCompleted(item));
+        }
 
     }
 }

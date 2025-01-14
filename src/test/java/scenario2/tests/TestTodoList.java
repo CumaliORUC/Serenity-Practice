@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import scenario2.pages.Todo_Page;
 
 import scenario2.steps.DesiredSteps;
-import scenario2.steps.todoSteps;
+import scenario2.steps.TodoSteps;
 
 @ExtendWith(SerenityJUnit5Extension.class)
 public class TestTodoList {
@@ -40,7 +40,7 @@ public class TestTodoList {
 
 
     @Steps
-    todoSteps todosteps;
+    TodoSteps todosteps;
 
     @Test
     public void testList(){

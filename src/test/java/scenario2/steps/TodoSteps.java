@@ -1,10 +1,9 @@
 package scenario2.steps;
 
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.core.pages.PageObject;
 import scenario2.pages.Todo_Page;
 
-public class todoSteps {
+public class TodoSteps {
     private Todo_Page todo_page;
 
     @Step

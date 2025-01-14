@@ -19,4 +19,9 @@ public class Todo_Page extends PageObject {
             .locatedBy("ul.todo-list li");
     public static Target TOTAL_TASK_COUNT  = Target.the("Task Numbers")
             .locatedBy("//strong");
+    public static Target TASK_CHECKBOX(String taskName) {
+        return Target.the("Checkbox for task: " + taskName)
+                .locatedBy("//label[text()='{0}']/preceding-sibling::input[@type='checkbox']")
+                .of(taskName);
+    }
 }

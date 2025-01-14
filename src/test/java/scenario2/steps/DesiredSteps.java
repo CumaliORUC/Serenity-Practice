@@ -2,6 +2,7 @@ package scenario2.steps;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -42,4 +43,11 @@ public class DesiredSteps {
                 }
         );
     }
+
+    public static Performable checkTaskAsCompleted(String taskName) {
+        return Task.where("{0} checks the task '" + taskName + "' as completed",
+                Click.on(Todo_Page.TASK_CHECKBOX(taskName))
+        );
+}
+
 }
